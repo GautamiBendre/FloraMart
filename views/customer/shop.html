@@ -25,7 +25,9 @@
 <body>
 
 
-<!-- Navbar -->
+<!-- =========================
+     NAVBAR
+========================= -->
 
 <nav class="navbar navbar-expand-lg">
 
@@ -42,18 +44,32 @@
         </a>
 
 
-        <!-- Menu -->
 
-        <div class="collapse navbar-collapse justify-content-end">
+        <!-- Mobile Toggle -->
 
-            <ul class="navbar-nav">
+        <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu">
+
+            ☰
+
+        </button>
+
+
+
+        <!-- Desktop Menu -->
+
+        <div class="desktop-menu ms-auto">
+
+            <ul class="navbar-nav align-items-center">
 
                 <li class="nav-item">
 
                     <a class="nav-link"
                         href="/">
 
-                        HOME
+                        Home
 
                     </a>
 
@@ -61,31 +77,27 @@
 
                 <li class="nav-item">
 
-                    <a class="nav-link"
+                    <a class="nav-link active"
                         href="/shop">
 
-                        SHOP
+                        Shop
 
                     </a>
 
                 </li>
-                <li class="nav-item">
-                        <a class="nav-link cart-link"
-                            href="/cart.html">
-                            CART
-                            <span id="cartCount">
-                                0
-                            </span>
-                        </a>
-                </li>
-
 
                 <li class="nav-item">
 
-                    <a class="nav-link"
-                        href="#">
+                    <a class="nav-link cart-link"
+                        href="/cart.html">
 
-                        OFFERS
+                        Cart
+
+                        <span id="cartCount">
+
+                            0
+
+                        </span>
 
                     </a>
 
@@ -96,7 +108,18 @@
                     <a class="nav-link"
                         href="#">
 
-                        CONTACT
+                        Offers
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                        href="#">
+
+                        Contact
 
                     </a>
 
@@ -112,7 +135,101 @@
 
 
 
-<!-- Products Section -->
+<!-- =========================
+     MOBILE SIDEBAR
+========================= -->
+
+<div
+class="offcanvas offcanvas-end"
+tabindex="-1"
+id="mobileMenu">
+
+    <div class="offcanvas-header">
+
+        <h5 class="offcanvas-title">
+
+            Bloom Heaven
+
+        </h5>
+
+        <button
+        type="button"
+
+        class="btn-close"
+
+        data-bs-dismiss="offcanvas">
+
+        </button>
+
+    </div>
+
+
+
+    <div class="offcanvas-body">
+
+        <ul class="mobile-nav">
+
+            <li>
+
+                <a href="/">
+
+                    Home
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/shop">
+
+                    Shop
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/cart.html">
+
+                    Cart
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    Offers
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    Contact
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     PRODUCTS SECTION
+========================= -->
 
 <section class="products-section">
 
@@ -151,43 +268,49 @@
                 placeholder="Search floral collection">
 
         </div>
+
+
+
+        <!-- Category -->
+
         <div class="category-wrapper">
 
-    <select id="categorySelect">
+            <select id="categorySelect">
 
-        <option value="All">
+                <option value="All">
 
-            All Categories
+                    All Categories
 
-        </option>
+                </option>
 
-        <option value="Birthday">
+                <option value="Birthday">
 
-            Birthday
+                    Birthday
 
-        </option>
+                </option>
 
-        <option value="Luxury">
+                <option value="Luxury">
 
-            Luxury
+                    Luxury
 
-        </option>
+                </option>
 
-        <option value="Wedding">
+                <option value="Wedding">
 
-            Wedding
+                    Wedding
 
-        </option>
+                </option>
 
-        <option value="Anniversary">
+                <option value="Anniversary">
 
-            Anniversary
+                    Anniversary
 
-        </option>
+                </option>
 
-    </select>
+            </select>
 
-</div>
+        </div>
+
 
 
         <!-- Sort -->
@@ -224,7 +347,6 @@
 
         </div>
 
-
     </div>
 
 
@@ -239,7 +361,16 @@
 </section>
 
 
+
+<!-- Main JS -->
+
 <script src="/js/main.js"></script>
+
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

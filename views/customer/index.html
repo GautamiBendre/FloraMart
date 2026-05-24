@@ -30,76 +30,122 @@
 <body>
 
 
-    <!-- Navbar -->
+    <!-- =========================
+         NAVBAR
+    ========================== -->
 
     <nav class="navbar navbar-expand-lg">
 
-        <div class="container-fluid px-lg-5 px-3">
+        <div class="container">
+
 
             <!-- Logo -->
 
             <a class="navbar-brand"
-                href="#">
+                href="/">
 
                 Bloom Heaven
 
             </a>
 
 
-            <!-- Mobile Toggle -->
 
             <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#mobileMenu">
 
-                <span class="navbar-toggler-icon"></span>
+    ☰
 
-            </button>
+</button>
 
 
-            <!-- Nav Links -->
+            <!-- Menu -->
 
-            <div class="collapse navbar-collapse justify-content-end"
-                id="navbarNav">
+            <div
+                class="collapse navbar-collapse"
+                id="mainNavbar">
 
-                <ul class="navbar-nav align-items-lg-center">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <!-- Home -->
 
                     <li class="nav-item">
+
                         <a class="nav-link active"
-                            href="#">
-                            HOME
+                            href="/">
+
+                            Home
+
                         </a>
+
                     </li>
 
+
+
+                    <!-- Shop -->
+
                     <li class="nav-item">
+
                         <a class="nav-link"
                             href="/shop">
-                            SHOP
+
+                            Shop
+
                         </a>
+
                     </li>
+
+
+
+                    <!-- Cart -->
+
                     <li class="nav-item">
+
                         <a class="nav-link cart-link"
                             href="/cart.html">
-                            CART
+
+                            Cart
+
                             <span id="cartCount">
+
                                 0
+
                             </span>
+
                         </a>
+
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="#">
-                            OFFERS
-                        </a>
-                    </li>
+
+
+                    <!-- Offers -->
 
                     <li class="nav-item">
+
                         <a class="nav-link"
                             href="#">
-                            CONTACT
+
+                            Offers
+
                         </a>
+
+                    </li>
+
+
+
+                    <!-- Contact -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                            href="#">
+
+                            Contact
+
+                        </a>
+
                     </li>
 
                 </ul>
@@ -109,15 +155,103 @@
         </div>
 
     </nav>
+    <!-- Mobile Sidebar -->
+
+<div
+class="offcanvas offcanvas-end"
+tabindex="-1"
+id="mobileMenu">
+
+    <div class="offcanvas-header">
+
+        <h5 class="offcanvas-title">
+
+            Bloom Heaven
+
+        </h5>
+
+        <button
+        type="button"
+
+        class="btn-close"
+
+        data-bs-dismiss="offcanvas">
+
+        </button>
+
+    </div>
 
 
 
-    <!-- Hero Section -->
+    <div class="offcanvas-body">
+
+        <ul class="mobile-nav">
+
+            <li>
+
+                <a href="/">
+
+                    Home
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/shop">
+
+                    Shop
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/cart.html">
+
+                    Cart
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    Offers
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#">
+
+                    Contact
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
 
     <section class="hero-section">
 
 
-        <!-- Background Floral Image -->
+        <!-- Background Image -->
 
         <div class="hero-image">
 
@@ -128,9 +262,12 @@
 
 
 
-        <!-- Overlay Content -->
+        <!-- Overlay -->
 
         <div class="hero-content">
+
+
+            <!-- Small Text -->
 
             <p class="hero-welcome">
 
@@ -138,6 +275,9 @@
 
             </p>
 
+
+
+            <!-- Heading -->
 
             <h1>
 
@@ -149,28 +289,43 @@
             </h1>
 
 
+
+            <!-- Description -->
+
             <p class="hero-text">
 
                 Elegant floral arrangements crafted
                 with beauty, emotion and luxury.
 
             </p>
+
+
+
+            <!-- Button -->
+
             <a href="/shop">
 
-            <button class="hero-button">
+                <button class="hero-button">
 
-                SHOP NOW →
+                    SHOP NOW →
 
-            </button>
+                </button>
 
-        </a>
-           
+            </a>
+
         </div>
 
     </section>
 
+
+
+    <!-- Main JS -->
+
     <script src="/js/main.js"></script>
+
+
     <!-- Bootstrap JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

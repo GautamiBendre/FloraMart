@@ -29,6 +29,69 @@ function displayCart(){
 
 
 
+    /* =========================
+       EMPTY CART
+    ========================= */
+
+    if(cart.length === 0){
+
+        cartContainer.innerHTML = `
+
+        <div class="empty-cart">
+
+            <div class="empty-cart-icon">
+
+                🛒
+
+            </div>
+
+            <h2>
+
+                Your Cart Is Empty
+
+            </h2>
+
+            <p>
+
+                Looks like you haven’t added
+                any beautiful bouquets yet.
+
+            </p>
+
+            <a href="/shop">
+
+                <button>
+
+                    Continue Shopping
+
+                </button>
+
+            </a>
+
+        </div>
+
+        `;
+
+
+
+        cartTotal.innerText = 0;
+        /* Hide Checkout Button */
+
+        document.querySelector(
+        ".cart-summary button"
+        ).style.display = "none";
+        document.querySelector(
+        ".cart-summary h3"
+        ).style.display = "none";
+
+        updateCartCount();
+
+        return;
+
+    }
+
+
+
     let total = 0;
 
 
@@ -44,6 +107,7 @@ function displayCart(){
 
         <div class="cart-card">
 
+
             <!-- Image -->
 
             <div class="cart-image">
@@ -52,6 +116,7 @@ function displayCart(){
                     alt="${item.title}">
 
             </div>
+
 
 
             <!-- Info -->
@@ -71,6 +136,7 @@ function displayCart(){
                 </p>
 
             </div>
+
 
 
             <!-- Quantity -->
@@ -98,6 +164,7 @@ function displayCart(){
             </div>
 
 
+
             <!-- Subtotal -->
 
             <div class="cart-subtotal">
@@ -105,6 +172,7 @@ function displayCart(){
                 ₹${item.price * item.quantity}
 
             </div>
+
 
 
             <!-- Remove -->

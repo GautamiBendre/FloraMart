@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:#f7f2fb;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+
+    height:70px;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    box-shadow:
+    0 2px 10px rgba(0,0,0,0.03);
+
+}
+
+.navbar-brand{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:36px;
+
+    font-weight:700;
+
+    color:#8e69bf !important;
+
+}
+
+.navbar-nav{
+
+    gap:35px;
+
+}
+
+.nav-link{
+
+    color:#4f3f63 !important;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    transition:0.3s;
+
+}
+
+.nav-link:hover{
+
+    color:#8e69bf !important;
+
+}
+
+.nav-link.active{
+
+    color:#9c76cb !important;
+
+    font-weight:600;
+
+}
+
+
+
+/* Cart */
+
+.cart-link{
+
+    position:relative;
+
+}
+
+#cartCount{
+
+    background:#9c76cb;
+
+    color:white;
+
+    border-radius:50%;
+
+    padding:3px 8px;
+
+    font-size:10px;
+
+    margin-left:5px;
+
+}
+
+
+
+/* =========================
+   MOBILE SIDEBAR
+========================= */
+
+.offcanvas{
+
+    width:280px !important;
+
+    background:white;
+
+}
+
+.offcanvas-title{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:28px;
+
+    font-weight:500;
+
+    color:#4f3f63;
+
+}
+
+.mobile-nav{
+
+    list-style:none;
+
+    padding:0;
+
+    margin-top:40px;
+
+}
+
+.mobile-nav li{
+
+    margin-bottom:6px;
+
+}
+
+.mobile-nav a{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:#4f3f63;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    letter-spacing:0.5px;
+
+    padding:12px 18px;
+
+    border-radius:14px;
+
+    transition:0.3s ease;
+
+}
+
+.mobile-nav a:hover{
+
+    background:#f3ebff;
+
+    color:#4f3f63;
+
+    transform:translateX(6px);
+
+}
+
+.mobile-nav a.active{
+
+    background:#4f3f63;
+
+    color:white;
+
+}
+
+
+
+/* =========================
+   RESPONSIVE NAVBAR
+========================= */
+
+@media(max-width:992px){
+
+    .desktop-menu{
+
+        display:none !important;
+
+    }
+
+}
+
+
+
+@media(min-width:992px){
+
+    .navbar-toggler{
+
+        display:none;
+
+    }
+
+}
+
+
+
+@media(max-width:768px){
+
+    .navbar-brand{
+
+        font-size:30px;
+
+    }
+
+}

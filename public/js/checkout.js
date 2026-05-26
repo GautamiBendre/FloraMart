@@ -178,18 +178,12 @@ document.getElementById(
 .then((res) => res.json())
 .then((data) => {
 
-    alert(
-        "Order Placed Successfully"
-    );
-
-
-
     localStorage.removeItem("cart");
 
-
+    /* Redirect To Success Page */
 
     window.location.href =
-    "/shop";
+    "/success.html";
 
 })
 .catch((error) => {

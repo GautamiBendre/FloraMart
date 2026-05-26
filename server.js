@@ -138,6 +138,21 @@ app.get("/checkout.html", (req,res) => {
 
 });
 
+/* Success Page */
+
+app.get("/success.html", (req,res) => {
+
+    res.sendFile(
+        path.join(
+            __dirname,
+            "views",
+            "customer",
+            "success.html"
+        )
+    );
+
+});
+
 /* Admin Orders */
 
 app.get("/admin/orders", (req,res) => {

@@ -1,0 +1,341 @@
+/* =========================
+   CHECKOUT SECTION
+========================= */
+
+.checkout-section{
+
+    width:92%;
+
+    margin:60px auto 100px;
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:34px;
+
+    align-items:start;
+
+}
+
+
+
+/* =========================
+   LEFT + RIGHT CARDS
+========================= */
+
+.checkout-form,
+.checkout-summary{
+
+    background:white;
+
+    padding:36px;
+
+    border-radius:28px;
+
+    box-shadow:
+    0 6px 24px rgba(0,0,0,0.04);
+
+}
+
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+.checkout-form h2,
+.checkout-summary h2{
+
+    font-size:28px;
+
+    font-weight:600;
+
+    color:#4f3f63;
+
+    margin-bottom:28px;
+
+}
+
+
+
+/* =========================
+   FORM
+========================= */
+
+.checkout-form form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select{
+
+    width:100%;
+
+    border:none;
+
+    background:#f7f2fb;
+
+    padding:16px 18px;
+
+    border-radius:18px;
+
+    outline:none;
+
+    font-size:15px;
+
+    color:#4f3f63;
+
+}
+
+
+
+.checkout-form textarea{
+
+    resize:none;
+
+    height:120px;
+
+}
+
+
+
+/* =========================
+   PAYMENT
+========================= */
+
+.payment-method{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.payment-method label{
+
+    color:#4f3f63;
+
+    font-weight:500;
+
+}
+
+
+
+/* =========================
+   PLACE ORDER BUTTON
+========================= */
+
+.checkout-form button{
+
+    border:none;
+
+    background:#9c76cb;
+
+    color:white;
+
+    padding:16px;
+
+    border-radius:40px;
+
+    font-size:15px;
+
+    transition:0.3s;
+
+}
+
+.checkout-form button:hover{
+
+    background:#8762b5;
+
+}
+
+
+
+/* =========================
+   ORDER SUMMARY
+========================= */
+
+.checkout-summary{
+
+    position:sticky;
+
+    top:100px;
+
+}
+
+
+
+/* =========================
+   SUMMARY ITEM
+========================= */
+
+.checkout-item{
+
+    display:flex;
+
+    gap:16px;
+
+    margin-bottom:22px;
+
+    align-items:center;
+
+}
+
+
+
+.checkout-item img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+}
+
+
+
+.checkout-item h4{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:28px;
+
+    color:#4f3f63;
+
+    margin-bottom:6px;
+
+}
+
+
+
+.checkout-item p{
+
+    margin:0;
+
+    color:#7b6b8d;
+
+    font-size:14px;
+
+}
+
+
+
+/* =========================
+   TOTAL
+========================= */
+
+.checkout-summary h3{
+
+    margin-top:26px;
+
+    color:#4f3f63;
+
+    font-size:28px;
+
+}
+
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+    .checkout-section{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+
+@media(max-width:768px){
+
+    .checkout-section{
+
+        width:94%;
+
+        gap:24px;
+
+        margin:40px auto 80px;
+
+    }
+
+    .checkout-form,
+    .checkout-summary{
+
+        padding:24px;
+
+        border-radius:24px;
+
+    }
+
+    .checkout-form h2,
+    .checkout-summary h2{
+
+        font-size:22px;
+
+        margin-bottom:22px;
+
+    }
+
+    .checkout-form input,
+    .checkout-form textarea,
+    .checkout-form select{
+
+        padding:14px 16px;
+
+        font-size:14px;
+
+    }
+
+    .checkout-item{
+
+        align-items:flex-start;
+
+    }
+
+    .checkout-item img{
+
+        width:72px;
+
+        height:72px;
+
+    }
+
+    .checkout-item h4{
+
+        font-size:22px;
+
+    }
+
+    .checkout-summary h3{
+
+        font-size:24px;
+
+    }
+
+}

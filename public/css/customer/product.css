@@ -1,0 +1,404 @@
+/* =========================
+   PRODUCT DETAILS
+========================= */
+
+.product-details{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:60px 0;
+
+    background:#f7f2fb;
+
+}
+
+
+
+/* =========================
+   MAIN IMAGE
+========================= */
+
+.main-image{
+
+    width:100%;
+
+    height:420px;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+.main-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+
+/* =========================
+   THUMBNAILS
+========================= */
+
+.thumbnail-container{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:15px;
+
+}
+
+.thumbnail-container img{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    border:2px solid transparent;
+
+}
+
+.thumbnail-container img:hover{
+
+    border-color:#9c76cb;
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* =========================
+   PRODUCT CONTENT
+========================= */
+
+.product-content{
+
+    padding-left:45px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.product-content h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:58px;
+
+    line-height:1;
+
+    color:#4f3f63;
+
+    margin-bottom:18px;
+
+}
+
+.product-content h2{
+
+    font-size:30px;
+
+    color:#9c76cb;
+
+    margin-bottom:18px;
+
+}
+
+.product-content p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:#6e5d82;
+
+    max-width:500px;
+
+    margin-bottom:30px;
+
+}
+
+.product-content button{
+
+    width:210px;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#9c76cb;
+
+    color:white;
+
+    font-size:13px;
+
+    transition:0.3s;
+
+}
+
+.product-content button:hover{
+
+    background:#7f5ab0;
+
+}
+
+
+
+/* =========================
+   PRODUCT TAGS
+========================= */
+
+.product-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:24px;
+
+}
+
+.product-tags span{
+
+    background:#f1e8ff;
+
+    color:#7b5aa8;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+}
+
+
+
+/* =========================
+   TRUST INFO
+========================= */
+
+.trust-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-bottom:30px;
+
+}
+
+.trust-info div{
+
+    background:white;
+
+    padding:14px 18px;
+
+    border-radius:16px;
+
+    color:#5d4d71;
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,0.03);
+
+}
+
+
+
+/* =========================
+   RELATED PRODUCTS
+========================= */
+
+.related-products-section{
+
+    padding:20px 0 90px;
+
+    background:#f7f2fb;
+
+}
+
+
+
+/* =========================
+   TOAST
+========================= */
+
+.custom-toast{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    background:#4f3f63;
+
+    color:white;
+
+    padding:16px 24px;
+
+    border-radius:18px;
+
+    z-index:9999;
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:0.3s ease;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+.show-toast{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+/* =========================
+   PRODUCT RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+    .product-content{
+
+        padding-left:0;
+
+        margin-top:35px;
+
+    }
+
+}
+
+
+
+@media(max-width:768px){
+
+    .main-image{
+
+        height:420px;
+
+    }
+
+    .product-content{
+
+        padding:0 14px;
+
+        margin-top:30px;
+
+        text-align:center;
+
+    }
+
+    .product-content h1{
+
+        font-size:34px;
+
+        line-height:1.1;
+
+        margin-top:20px;
+
+        margin-bottom:16px;
+
+    }
+
+    .product-content h2{
+
+        font-size:24px;
+
+        margin-bottom:20px;
+
+    }
+
+    .product-content p{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+    .product-tags{
+
+        justify-content:center;
+
+    }
+
+    .trust-info div{
+
+        padding:12px 16px;
+
+        font-size:14px;
+
+    }
+
+    .product-content button{
+
+        width:180px;
+
+        height:48px;
+
+        font-size:12px;
+
+    }
+
+    .related-products-section .section-title h2{
+
+        font-size:34px;
+
+    }
+
+    .custom-toast{
+
+        right:20px;
+
+        left:20px;
+
+        bottom:20px;
+
+        text-align:center;
+
+    }
+
+}

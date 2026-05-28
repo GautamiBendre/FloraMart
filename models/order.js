@@ -43,7 +43,6 @@ new mongoose.Schema({
             quantity:Number,
 
             image:String
-
         }
 
     ],

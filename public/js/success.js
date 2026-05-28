@@ -1,12 +1,16 @@
 /* =========================
-   GENERATE ORDER ID
+   GET ORDER ID
 ========================= */
 
-const orderId =
-"BH" +
-Math.floor(
-    100000 + Math.random() * 900000
+const params =
+new URLSearchParams(
+    window.location.search
 );
+
+
+
+const orderId =
+params.get("id");
 
 
 
@@ -17,6 +21,17 @@ Math.floor(
 document.getElementById(
     "orderId"
 ).innerText = orderId;
+
+
+
+/* =========================
+   TRACK BUTTON
+========================= */
+
+document.getElementById(
+    "trackBtn"
+).href =
+`/track/${orderId}`;
 
 
 

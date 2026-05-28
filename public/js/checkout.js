@@ -178,12 +178,51 @@ document.getElementById(
 .then((res) => res.json())
 .then((data) => {
 
-    localStorage.removeItem("cart");
+    /* Existing Orders */
 
-    /* Redirect To Success Page */
+    let myOrders =
+    JSON.parse(
+        localStorage.getItem(
+            "myOrders"
+        )
+    ) || [];
+
+
+
+    /* Save New Order ID */
+
+    myOrders.push(
+        data.orderId
+    );
+
+
+
+    /* Store Back */
+
+    localStorage.setItem(
+
+        "myOrders",
+
+        JSON.stringify(
+            myOrders
+        )
+
+    );
+
+
+
+    /* Clear Cart */
+
+    localStorage.removeItem(
+        "cart"
+    );
+
+
+
+    /* Redirect */
 
     window.location.href =
-    "/success.html";
+    `/success.html?id=${data.orderId}`;
 
 })
 .catch((error) => {

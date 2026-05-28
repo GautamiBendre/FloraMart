@@ -50,28 +50,57 @@
 
 
 
-        <!-- Mobile Toggle -->
+        <!-- RIGHT MOBILE ACTIONS -->
 
-        <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#mobileMenu">
-
-            ☰
-
-        </button>
+        <div class="mobile-actions d-lg-none">
 
 
+            <!-- MOBILE CART -->
 
-        <!-- Desktop Menu -->
+            <a href="/cart.html"
+                class="mobile-cart">
 
-        <div class="desktop-menu ms-auto">
+                🛒
 
-            <ul class="navbar-nav align-items-center">
+                <span id="mobileCartCount">
+
+                    0
+
+                </span>
+
+            </a>
+
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+
+                ☰
+
+            </button>
+
+        </div>
+
+
+
+        <!-- DESKTOP MENU -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                <!-- Home -->
 
                 <li class="nav-item">
 
-                    <a class="nav-link"
+                    <a class="nav-link active"
                         href="/">
 
                         Home
@@ -79,6 +108,10 @@
                     </a>
 
                 </li>
+
+
+
+                <!-- Shop -->
 
                 <li class="nav-item">
 
@@ -91,9 +124,13 @@
 
                 </li>
 
+
+
+                <!-- Cart -->
+
                 <li class="nav-item">
 
-                    <a class="nav-link cart-link active"
+                    <a class="nav-link cart-link"
                         href="/cart.html">
 
                         Cart
@@ -103,6 +140,51 @@
                             0
 
                         </span>
+
+                    </a>
+
+                </li>
+
+
+
+                <!-- My Orders -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                        href="/myOrders.html">
+
+                        My Orders
+
+                    </a>
+
+                </li>
+
+
+
+                <!-- Offers -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                        href="/offers.html">
+
+                        Offers
+
+                    </a>
+
+                </li>
+
+
+
+                <!-- Contact -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                        href="/contact.html">
+
+                        Contact
 
                     </a>
 
@@ -184,7 +266,17 @@ id="mobileMenu">
 
             <li>
 
-                <a href="#">
+                <a href="/myOrders.html">
+
+                    My Orders
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/offers.html">
 
                     Offers
 
@@ -194,7 +286,7 @@ id="mobileMenu">
 
             <li>
 
-                <a href="#">
+                <a href="/contact.html">
 
                     Contact
 

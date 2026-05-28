@@ -21,10 +21,13 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- CSS -->
+     <link rel="stylesheet"
+    href="/css/admin/admin-layout.css">
 
     <link rel="stylesheet"
-        href="/css/admin.css">
+    href="/css/admin/orders.css">
 
+    
 </head>
 
 <body>
@@ -33,64 +36,98 @@
 <div class="admin-layout">
 
 
-    <!-- Sidebar -->
-
     <div class="sidebar">
 
-        <div class="logo">
+    <div class="logo">
 
-            Bloom Heaven
-
-        </div>
-
-        <ul>
-
-            <li>
-
-                <a href="/admin/dashboard">
-
-                    <i class="fa-solid fa-table-columns"></i>
-
-                    Dashboard
-
-                </a>
-
-            </li>
-
-            <li>
-
-                <a href="/admin/products">
-
-                    <i class="fa-solid fa-box"></i>
-
-                    Products
-
-                </a>
-
-            </li>
-
-            <li class="active">
-
-                <a href="/admin/orders">
-
-                    <i class="fa-solid fa-cart-shopping"></i>
-
-                    Orders
-                    <span id="orderCount">
-
-                        0
-
-                    </span>
-
-
-                </a>
-
-            </li>
-
-        </ul>
+        Bloom Heaven
 
     </div>
 
+    <ul>
+
+
+        <!-- Dashboard -->
+
+        <li class="active">
+
+            <a href="/admin/dashboard">
+
+                <i class="fa-solid fa-table-columns"></i>
+
+                <span>
+
+                    Dashboard
+
+                </span>
+
+            </a>
+
+        </li>
+
+
+
+        <!-- Products -->
+
+        <li>
+
+            <a href="/admin/products">
+
+                <i class="fa-solid fa-box"></i>
+
+                <span>
+
+                    Products
+
+                </span>
+
+            </a>
+
+        </li>
+
+
+
+        <!-- Orders -->
+
+        <li>
+
+            <a href="/admin/orders">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+                Orders
+                <span>
+
+                    0
+
+                </span>
+
+            </a>
+
+        </li>
+
+
+
+        <!-- Offers -->
+
+        <li>
+
+            <a href="/admin/offers">
+
+                <i class="fa-solid fa-tags"></i>
+
+                <span>
+
+                    Offers
+
+                </span>
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</div>
 
 
     <!-- Main -->

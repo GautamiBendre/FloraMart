@@ -3,7 +3,9 @@ require("../models/order");
 
 
 
-/* Create Order */
+/* =========================
+   CREATE ORDER
+========================= */
 
 const createOrder =
 async (req,res) => {
@@ -15,12 +17,17 @@ async (req,res) => {
 
         await newOrder.save();
 
+
+
         res.status(201).json({
 
             success:true,
 
             message:
-            "Order Placed Successfully"
+            "Order Placed Successfully",
+
+            orderId:
+            newOrder._id
 
         });
 
@@ -41,7 +48,9 @@ async (req,res) => {
 
 
 
-/* Get Orders */
+/* =========================
+   GET ALL ORDERS
+========================= */
 
 const getOrders =
 async (req,res) => {
@@ -77,7 +86,66 @@ async (req,res) => {
 
 };
 
-/* Update Order Status */
+
+
+/* =========================
+   GET SINGLE ORDER
+========================= */
+
+const getSingleOrder =
+async (req,res) => {
+
+    try{
+
+        const order =
+        await Order.findById(
+            req.params.id
+        );
+
+
+
+        if(!order){
+
+            return res.status(404).json({
+
+                success:false,
+
+                message:"Order Not Found"
+
+            });
+
+        }
+
+
+
+        res.status(200).json({
+
+            success:true,
+
+            order
+
+        });
+
+    }
+    catch(error){
+
+        res.status(500).json({
+
+            success:false,
+
+            message:error.message
+
+        });
+
+    }
+
+};
+
+
+
+/* =========================
+   UPDATE ORDER STATUS
+========================= */
 
 const updateOrderStatus =
 async (req,res) => {
@@ -140,10 +208,15 @@ async (req,res) => {
 
 
 
+/* =========================
+   EXPORTS
+========================= */
+
 module.exports = {
 
     createOrder,
     getOrders,
+    getSingleOrder,
     updateOrderStatus
 
 };

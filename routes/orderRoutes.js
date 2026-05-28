@@ -8,13 +8,12 @@ const {
 
     createOrder,
     getOrders,
-    updateOrderStatus
+    updateOrderStatus,
+    getSingleOrder
 
 } = require(
 "../controllers/orderController"
 );
-
-
 
 router.post(
 "/",
@@ -26,10 +25,16 @@ router.get(
 getOrders
 );
 
+router.get(
+"/:id",
+getSingleOrder
+);
+
 router.put(
 "/:id",
 updateOrderStatus
 );
+
 
 
 

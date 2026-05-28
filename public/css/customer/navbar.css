@@ -226,3 +226,101 @@ body{
     }
 
 }
+
+/* =========================
+   MOBILE ACTIONS
+========================= */
+
+.mobile-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+
+/* =========================
+   MOBILE CART
+========================= */
+
+.mobile-cart{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:14px;
+
+    background:#f3e9ff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    text-decoration:none;
+
+    color:#9c76cb;
+
+    font-size:18px;
+
+}
+
+
+
+/* =========================
+   MOBILE CART COUNT
+========================= */
+
+#mobileCartCount{
+
+    position:absolute;
+
+    top:-6px;
+
+    right:-6px;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    background:#9c76cb;
+
+    color:white;
+
+    font-size:11px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:600;
+
+}
+
+
+
+/* =========================
+   DESKTOP HIDE
+========================= */
+
+@media(min-width:992px){
+
+    .mobile-actions{
+
+        display:none;
+
+    }
+
+}

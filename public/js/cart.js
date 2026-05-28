@@ -258,8 +258,14 @@ function saveCart(){
 
 
 /* Update Navbar Count */
-
 function updateCartCount(){
+
+    const cart =
+    JSON.parse(
+        localStorage.getItem("cart")
+    ) || [];
+
+
 
     let totalQuantity = 0;
 
@@ -273,9 +279,39 @@ function updateCartCount(){
 
 
 
+    /* Desktop Count */
+
+    const cartCount =
     document.getElementById(
         "cartCount"
-    ).innerText = totalQuantity;
+    );
+
+
+
+    if(cartCount){
+
+        cartCount.innerText =
+        totalQuantity;
+
+    }
+
+
+
+    /* Mobile Count */
+
+    const mobileCartCount =
+    document.getElementById(
+        "mobileCartCount"
+    );
+
+
+
+    if(mobileCartCount){
+
+        mobileCartCount.innerText =
+        totalQuantity;
+
+    }
 
 }
 

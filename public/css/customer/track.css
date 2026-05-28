@@ -1,0 +1,336 @@
+/* =========================
+   TRACK SECTION
+========================= */
+
+.track-section{
+
+    min-height:calc(100vh - 70px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px 20px;
+
+    background:#f7f2fb;
+
+}
+
+
+
+/* =========================
+   TRACK CARD
+========================= */
+
+.track-card{
+
+    width:100%;
+
+    max-width:1100px;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:50px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.05);
+
+}
+
+
+
+/* =========================
+   TITLE
+========================= */
+
+.track-title{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+.track-title p{
+
+    letter-spacing:3px;
+
+    color:#9c76cb;
+
+    font-size:12px;
+
+    margin-bottom:12px;
+
+}
+
+.track-title h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:56px;
+
+    color:#4f3f63;
+
+}
+
+
+
+/* =========================
+   ORDER INFO
+========================= */
+
+.track-info-box{
+
+    background:#f7f2fb;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    margin-bottom:50px;
+
+}
+
+.track-info-box h3{
+
+    font-size:30px;
+
+    color:#4f3f63;
+
+    margin-bottom:14px;
+
+}
+
+.track-info-box p{
+
+    color:#7d6e90;
+
+    margin-bottom:10px;
+
+    font-size:16px;
+
+}
+
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+    position:relative;
+
+}
+
+
+
+/* LINE */
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:18px;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:#eadcf9;
+
+    z-index:0;
+
+}
+
+
+
+/* STEP */
+
+.timeline-step{
+
+    position:relative;
+
+    z-index:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    flex:1;
+
+}
+
+
+
+/* CIRCLE */
+
+.timeline-circle{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:#eadcf9;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:14px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+
+
+/* TEXT */
+
+.timeline-step p{
+
+    text-align:center;
+
+    color:#7d6e90;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
+
+
+
+/* ACTIVE STEP */
+
+.timeline-step.active .timeline-circle{
+
+    background:#9c76cb;
+
+}
+
+.timeline-step.active p{
+
+    color:#4f3f63;
+
+    font-weight:600;
+
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .track-card{
+
+        padding:30px 22px;
+
+        border-radius:24px;
+
+    }
+
+    .track-title{
+
+        margin-bottom:35px;
+
+    }
+
+    .track-title h1{
+
+        font-size:40px;
+
+        line-height:1.1;
+
+    }
+
+    .track-info-box{
+
+        padding:22px;
+
+        margin-bottom:35px;
+
+    }
+
+    .track-info-box h3{
+
+        font-size:24px;
+
+    }
+
+    .timeline{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:30px;
+
+    }
+
+    .timeline::before{
+
+        width:4px;
+
+        height:100%;
+
+        left:19px;
+
+        top:0;
+
+    }
+
+    .timeline-step{
+
+        flex-direction:row;
+
+        align-items:center;
+
+        gap:16px;
+
+    }
+
+    .timeline-circle{
+
+        margin-bottom:0;
+
+        flex-shrink:0;
+
+    }
+
+    .timeline-step p{
+
+        text-align:left;
+
+    }
+
+}

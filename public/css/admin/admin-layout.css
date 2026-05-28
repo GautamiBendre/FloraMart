@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f6f1fb;
+
+}
+
+/* =========================
+   ADMIN LAYOUT
+========================= */
+
+.admin-layout{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar{
+
+    width:280px;
+
+    background:#4f3f63;
+
+    color:white;
+
+    padding:40px 25px;
+
+    transition:0.3s;
+
+}
+
+.logo{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    margin-bottom:60px;
+
+}
+
+/* Sidebar Menu */
+
+.sidebar ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.sidebar ul li{
+
+    padding:18px 20px;
+
+    border-radius:12px;
+
+    margin-bottom:15px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+.sidebar ul li:hover{
+
+    background:#9c76cb;
+
+}
+
+.sidebar ul li.active{
+
+    background:#9c76cb;
+
+}
+
+/* Sidebar Links */
+
+.sidebar a{
+
+    color:white;
+
+    text-decoration:none;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    width:100%;
+
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content{
+
+    flex:1;
+
+    padding:35px;
+
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:40px;
+
+}
+
+.topbar h2{
+
+    color:#4f3f63;
+
+}
+
+.admin-profile{
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    background:#9c76cb;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+
+    font-size:20px;
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:992px){
+
+    .sidebar{
+
+        width:90px;
+
+    }
+
+    .logo{
+
+        display:none;
+
+    }
+
+    .sidebar ul li{
+
+        justify-content:center;
+
+    }
+
+    .sidebar ul li span{
+
+        display:none;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .admin-layout{
+
+        flex-direction:column;
+        align-items:flex-start;
+
+    }
+
+    .sidebar{
+
+    width:100%;
+
+    padding:8px 10px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+    height:auto;
+    flex:none;
+
+}
+
+.main-content{
+
+    width:100%;
+
+}
+
+.sidebar::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+
+.sidebar ul{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    width:max-content;
+
+    flex-wrap:nowrap;
+
+}
+
+
+
+.sidebar ul li{
+
+    margin-bottom:0;
+
+    padding:12px 18px;
+
+    border-radius:14px;
+
+    flex-shrink:0;
+
+}
+
+}

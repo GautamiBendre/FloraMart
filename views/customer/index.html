@@ -38,129 +38,175 @@ href="/css/style.css">
     <!-- =========================
          NAVBAR
     ========================== -->
+<nav class="navbar navbar-expand-lg">
 
-    <nav class="navbar navbar-expand-lg">
-
-        <div class="container">
+    <div class="container">
 
 
-            <!-- Logo -->
+        <!-- Logo -->
 
-            <a class="navbar-brand"
-                href="/">
+        <a class="navbar-brand"
+            href="/">
 
-                Bloom Heaven
+            Bloom Heaven
+
+        </a>
+
+
+
+        <!-- RIGHT MOBILE ACTIONS -->
+
+        <div class="mobile-actions d-lg-none">
+
+
+            <!-- MOBILE CART -->
+
+            <a href="/cart.html"
+                class="mobile-cart">
+
+                🛒
+
+                <span id="mobileCartCount">
+
+                    0
+
+                </span>
 
             </a>
 
 
 
+            <!-- MOBILE MENU BUTTON -->
+
             <button class="navbar-toggler"
-    type="button"
-    data-bs-toggle="offcanvas"
-    data-bs-target="#mobileMenu">
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
 
-    ☰
+                ☰
 
-</button>
-
-
-            <!-- Menu -->
-
-            <div
-                class="collapse navbar-collapse"
-                id="mainNavbar">
-
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-
-
-                    <!-- Home -->
-
-                    <li class="nav-item">
-
-                        <a class="nav-link active"
-                            href="/">
-
-                            Home
-
-                        </a>
-
-                    </li>
-
-
-
-                    <!-- Shop -->
-
-                    <li class="nav-item">
-
-                        <a class="nav-link"
-                            href="/shop">
-
-                            Shop
-
-                        </a>
-
-                    </li>
-
-
-
-                    <!-- Cart -->
-
-                    <li class="nav-item">
-
-                        <a class="nav-link cart-link"
-                            href="/cart.html">
-
-                            Cart
-
-                            <span id="cartCount">
-
-                                0
-
-                            </span>
-
-                        </a>
-
-                    </li>
-
-
-
-                    <!-- Offers -->
-
-                    <li class="nav-item">
-
-                        <a class="nav-link"
-                            href="#">
-
-                            Offers
-
-                        </a>
-
-                    </li>
-
-
-
-                    <!-- Contact -->
-
-                    <li class="nav-item">
-
-                        <a class="nav-link"
-                            href="#">
-
-                            Contact
-
-                        </a>
-
-                    </li>
-
-                </ul>
-
-            </div>
+            </button>
 
         </div>
 
-    </nav>
-    <!-- Mobile Sidebar -->
+
+
+        <!-- DESKTOP MENU -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                <!-- Home -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link active"
+                        href="/">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+
+                <!-- Shop -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                        href="/shop">
+
+                        Shop
+
+                    </a>
+
+                </li>
+
+
+
+                <!-- Cart -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link cart-link"
+                        href="/cart.html">
+
+                        Cart
+
+                        <span id="cartCount">
+
+                            0
+
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+
+                <!-- My Orders -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                        href="/myOrders.html">
+
+                        My Orders
+
+                    </a>
+
+                </li>
+
+
+
+                <!-- Offers -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                        href="/offers.html">
+
+                        Offers
+
+                    </a>
+
+                </li>
+
+
+
+                <!-- Contact -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                        href="/contact.html">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     MOBILE SIDEBAR
+========================= -->
 
 <div
 class="offcanvas offcanvas-end"
@@ -224,7 +270,17 @@ id="mobileMenu">
 
             <li>
 
-                <a href="#">
+                <a href="/myOrders.html">
+
+                    My Orders
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/offers.html">
 
                     Offers
 
@@ -234,7 +290,7 @@ id="mobileMenu">
 
             <li>
 
-                <a href="#">
+                <a href="/contact.html">
 
                     Contact
 
@@ -247,6 +303,9 @@ id="mobileMenu">
     </div>
 
 </div>
+
+
+
 
 
     <!-- =========================

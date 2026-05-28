@@ -42,6 +42,9 @@
 
     <div class="container">
 
+
+        <!-- Logo -->
+
         <a class="navbar-brand"
             href="/">
 
@@ -49,9 +52,257 @@
 
         </a>
 
+
+
+        <!-- RIGHT MOBILE ACTIONS -->
+
+        <div class="mobile-actions d-lg-none">
+
+
+            <!-- MOBILE CART -->
+
+            <a href="/cart.html"
+                class="mobile-cart">
+
+                🛒
+
+                <span id="mobileCartCount">
+
+                    0
+
+                </span>
+
+            </a>
+
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+
+                ☰
+
+            </button>
+
+        </div>
+
+
+
+        <!-- DESKTOP MENU -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                <!-- Home -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link active"
+                        href="/">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+
+                <!-- Shop -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                        href="/shop">
+
+                        Shop
+
+                    </a>
+
+                </li>
+
+
+
+                <!-- Cart -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link cart-link"
+                        href="/cart.html">
+
+                        Cart
+
+                        <span id="cartCount">
+
+                            0
+
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+
+                <!-- My Orders -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                        href="/myOrders.html">
+
+                        My Orders
+
+                    </a>
+
+                </li>
+
+
+
+                <!-- Offers -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                        href="/offers.html">
+
+                        Offers
+
+                    </a>
+
+                </li>
+
+
+
+                <!-- Contact -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                        href="/contact.html">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
     </div>
 
 </nav>
+
+
+
+<!-- =========================
+     MOBILE SIDEBAR
+========================= -->
+
+<div
+class="offcanvas offcanvas-end"
+tabindex="-1"
+id="mobileMenu">
+
+    <div class="offcanvas-header">
+
+        <h5 class="offcanvas-title">
+
+            Bloom Heaven
+
+        </h5>
+
+        <button
+        type="button"
+
+        class="btn-close"
+
+        data-bs-dismiss="offcanvas">
+
+        </button>
+
+    </div>
+
+
+
+    <div class="offcanvas-body">
+
+        <ul class="mobile-nav">
+
+            <li>
+
+                <a href="/">
+
+                    Home
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/shop">
+
+                    Shop
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/cart.html">
+
+                    Cart
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/myOrders.html">
+
+                    My Orders
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/offers.html">
+
+                    Offers
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/contact.html">
+
+                    Contact
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
 
 
 
@@ -109,7 +360,7 @@
 
             </a>
 
-            <a href="/track.html">
+            <a id="trackBtn">
 
                 <button class="track-btn">
 

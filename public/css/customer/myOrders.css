@@ -1,0 +1,403 @@
+/* =========================
+   MY ORDERS SECTION
+========================= */
+
+.my-orders-section{
+
+    min-height:calc(100vh - 70px);
+
+    padding:60px 0;
+
+    background:#f7f2fb;
+
+}
+
+
+
+/* =========================
+   TITLE
+========================= */
+
+.orders-title{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.orders-title p{
+
+    letter-spacing:3px;
+
+    color:#9c76cb;
+
+    font-size:12px;
+
+    margin-bottom:12px;
+
+}
+
+.orders-title h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:58px;
+
+    color:#4f3f63;
+
+}
+
+
+
+/* =========================
+   ORDERS CONTAINER
+========================= */
+
+#ordersContainer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+
+
+/* =========================
+   ORDER CARD
+========================= */
+
+.order-card{
+
+    background:white;
+
+    border-radius:26px;
+
+    padding:28px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:25px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.04);
+
+}
+
+
+
+/* =========================
+   LEFT
+========================= */
+
+.order-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex:1;
+
+}
+
+.order-left img{
+
+    width:110px;
+
+    height:110px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+}
+
+
+
+/* =========================
+   ORDER INFO
+========================= */
+
+.order-info h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:34px;
+
+    color:#4f3f63;
+
+    margin-bottom:8px;
+
+}
+
+.order-info p{
+
+    color:#7b6b8d;
+
+    margin-bottom:6px;
+
+    font-size:15px;
+
+}
+
+
+
+/* =========================
+   STATUS BADGE
+========================= */
+
+.order-status{
+
+    display:inline-block;
+
+    background:#f3e9ff;
+
+    color:#9c76cb;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    margin-top:10px;
+
+}
+
+
+
+/* =========================
+   RIGHT
+========================= */
+
+.order-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:15px;
+
+}
+
+
+
+/* =========================
+   TOTAL
+========================= */
+
+.order-total{
+
+    font-size:28px;
+
+    font-weight:600;
+
+    color:#4f3f63;
+
+}
+
+
+
+/* =========================
+   TRACK BUTTON
+========================= */
+
+.track-btn{
+
+    border:none;
+
+    background:#9c76cb;
+
+    color:white;
+
+    padding:12px 24px;
+
+    border-radius:40px;
+
+    font-size:14px;
+
+    transition:0.3s;
+
+    text-decoration:none;
+
+}
+
+.track-btn:hover{
+
+    background:#8660b4;
+
+}
+
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-orders{
+
+    background:white;
+
+    border-radius:26px;
+
+    padding:70px 30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.04);
+
+}
+
+.empty-orders h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    color:#4f3f63;
+
+    margin-bottom:14px;
+
+}
+
+.empty-orders p{
+
+    color:#7b6b8d;
+
+    margin-bottom:24px;
+
+}
+
+.empty-orders a{
+
+    display:inline-block;
+
+    background:#9c76cb;
+
+    color:white;
+
+    padding:14px 28px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .my-orders-section{
+
+        padding:40px 0;
+
+    }
+
+    .orders-title{
+
+        margin-bottom:30px;
+
+    }
+
+    .orders-title h1{
+
+        font-size:42px;
+
+    }
+
+    .order-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:22px;
+
+        border-radius:22px;
+
+    }
+
+    .order-left{
+
+        width:100%;
+
+        align-items:flex-start;
+
+    }
+
+    .order-left img{
+
+        width:85px;
+
+        height:85px;
+
+        border-radius:16px;
+
+    }
+
+    .order-info h2{
+
+        font-size:26px;
+
+        line-height:1.2;
+
+    }
+
+    .order-info p{
+
+        font-size:14px;
+
+    }
+
+    .order-right{
+
+        width:100%;
+
+        align-items:flex-start;
+
+    }
+
+    .order-total{
+
+        font-size:24px;
+
+    }
+
+    .track-btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .empty-orders{
+
+        padding:50px 22px;
+
+    }
+
+    .empty-orders h2{
+
+        font-size:34px;
+
+    }
+
+}

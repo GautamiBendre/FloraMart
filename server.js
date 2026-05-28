@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const productRoutes = require("./routes/productRoutes");
 const orderRoutes =require("./routes/orderRoutes");
+const offerRoutes =require("./routes/offerRoutes");
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(express.urlencoded({ extended:true }));
 
 app.use("/api/products", productRoutes);
 app.use("/api/orders",orderRoutes);
+app.use("/api/offers",offerRoutes);
 
 /* Static Folder */
 
@@ -164,6 +166,68 @@ app.get("/admin/orders", (req,res) => {
 
 });
 
+app.get("/track/:id", (req,res) => {
+
+    res.sendFile(
+
+        path.join(
+            __dirname,
+            "views/customer/track.html"
+        )
+
+    );
+
+});
+
+app.get("/myOrders.html", (req,res) => {
+
+    res.sendFile(
+
+        path.join(
+            __dirname,
+            "views/customer/myOrders.html"
+        )
+
+    );
+
+});
+app.get("/offers.html", (req,res) => {
+
+    res.sendFile(
+
+        path.join(
+            __dirname,
+            "views/customer/offers.html"
+        )
+
+    );
+
+});
+app.get("/admin/offers", (req,res) => {
+
+    res.sendFile(
+
+        path.join(
+            __dirname,
+            "views/admin/offers.html"
+        )
+
+    );
+
+});
+
+app.get("/contact.html", (req,res) => {
+
+    res.sendFile(
+
+        path.join(
+            __dirname,
+            "views/customer/contact.html"
+        )
+
+    );
+
+});
 /* Server */
 
 const PORT = process.env.PORT || 5000;

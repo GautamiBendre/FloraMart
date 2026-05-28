@@ -294,6 +294,8 @@ function updateCartCount(){
 
 
 
+    /* Desktop Count */
+
     const cartCount =
     document.getElementById(
         "cartCount"
@@ -308,8 +310,25 @@ function updateCartCount(){
 
     }
 
-}
 
+
+    /* Mobile Count */
+
+    const mobileCartCount =
+    document.getElementById(
+        "mobileCartCount"
+    );
+
+
+
+    if(mobileCartCount){
+
+        mobileCartCount.innerText =
+        totalQuantity;
+
+    }
+
+}
 
 
 /* Load */

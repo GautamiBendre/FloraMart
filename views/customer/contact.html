@@ -8,26 +8,27 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-    <title>Product Details</title>
+    <title>Contact Us</title>
 
     <!-- Bootstrap -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet">
 
-    <!-- CSS -->
-     <link rel="stylesheet"
-href="/css/style.css">
+    <!-- Icons -->
 
     <link rel="stylesheet"
-    href="/css/customer/navbar.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Navbar CSS -->
 
     <link rel="stylesheet"
-    href="/css/customer/product.css">
+        href="/css/customer/navbar.css">
+
+    <!-- Contact CSS -->
 
     <link rel="stylesheet"
-    href="/css/customer/shop.css">
-
+        href="/css/customer/contact.css">
 
 </head>
 
@@ -64,7 +65,7 @@ href="/css/style.css">
             <a href="/cart.html"
                 class="mobile-cart">
 
-               🛒
+                🛒
 
                 <span id="mobileCartCount">
 
@@ -100,11 +101,9 @@ href="/css/style.css">
             <ul class="navbar-nav ms-auto align-items-lg-center">
 
 
-                <!-- Home -->
-
                 <li class="nav-item">
 
-                    <a class="nav-link active"
+                    <a class="nav-link"
                         href="/">
 
                         Home
@@ -114,8 +113,6 @@ href="/css/style.css">
                 </li>
 
 
-
-                <!-- Shop -->
 
                 <li class="nav-item">
 
@@ -129,8 +126,6 @@ href="/css/style.css">
                 </li>
 
 
-
-                <!-- Cart -->
 
                 <li class="nav-item">
 
@@ -151,8 +146,6 @@ href="/css/style.css">
 
 
 
-                <!-- My Orders -->
-
                 <li class="nav-item">
 
                     <a class="nav-link"
@@ -165,8 +158,6 @@ href="/css/style.css">
                 </li>
 
 
-
-                <!-- Offers -->
 
                 <li class="nav-item">
 
@@ -181,11 +172,9 @@ href="/css/style.css">
 
 
 
-                <!-- Contact -->
-
                 <li class="nav-item">
 
-                    <a class="nav-link"
+                    <a class="nav-link active"
                         href="/contact.html">
 
                         Contact
@@ -304,18 +293,36 @@ id="mobileMenu">
 
 </div>
 
+
+
 <!-- =========================
-     PRODUCT DETAILS
+     HERO
 ========================= -->
 
-<section class="product-details">
+<section class="contact-hero">
 
     <div class="container">
 
-        <div class="row"
-            id="product-details-container">
+        <p>
 
-        </div>
+            SUPPORT & HELP
+
+        </p>
+
+        <h1>
+
+            Need Help?
+            <br>
+            We’re Here For You
+
+        </h1>
+
+        <span>
+
+            Bloom Heaven is always happy to help you with
+            orders, delivery updates, and custom bouquets.
+
+        </span>
 
     </div>
 
@@ -323,16 +330,172 @@ id="mobileMenu">
 
 
 
-<!-- Product JS -->
+<!-- =========================
+     CONTACT OPTIONS
+========================= -->
 
-<script src="/js/productDetails.js"></script>
+<section class="contact-options">
+
+    <div class="container">
+
+
+        <div class="contact-grid">
+
+
+            <!-- WhatsApp -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                </div>
+
+                <h2>
+
+                    WhatsApp Support
+
+                </h2>
+
+                <p>
+
+                    Chat instantly for order help,
+                    custom bouquets, and delivery updates.
+
+                </p>
+
+                <a href="#">
+
+                    Chat Now
+
+                </a>
+
+            </div>
 
 
 
-<!-- Bootstrap JS -->
+            <!-- Call -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </div>
+
+                <h2>
+
+                    Call Support
+
+                </h2>
+
+                <p>
+
+                    Need urgent help?
+                    Reach us directly anytime.
+
+                </p>
+
+                <a href="tel:+919999999999">
+
+                    +91 99999 99999
+
+                </a>
+
+            </div>
+
+
+
+            <!-- Email -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </div>
+
+                <h2>
+
+                    Email Us
+
+                </h2>
+
+                <p>
+
+                    For collaborations, bulk orders,
+                    and business inquiries.
+
+                </p>
+
+                <a href="mailto:support@bloomheaven.com">
+
+                    support@bloomheaven.com
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Bootstrap -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<!-- Main JS -->
+
+<script src="/js/main.js"></script>
+
 </body>
+
+<!--<section class="custom-bouquet">
+
+    <div class="container">
+
+
+        <div class="custom-card">
+
+            <div class="custom-content">
+
+                <p>
+
+                    CUSTOM BOUQUET
+
+                </p>
+
+                <h2>
+
+                    Want Something Unique?
+
+                </h2>
+
+                <span>
+
+                    Tell us your favorite flowers,
+                    colors, wrapping style, or occasion —
+                    we’ll create a bouquet made specially for you.
+
+                </span>
+
+                <a href="#">
+
+                    Create Custom Bouquet
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>-->
 
 </html>

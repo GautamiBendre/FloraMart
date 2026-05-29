@@ -331,3 +331,31 @@
     }
 
 }
+
+.order-id{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#9c76cb;
+
+    margin-top:5px;
+
+}
+
+#searchOrder{
+
+    width:300px;
+
+    padding:12px 16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    outline:none;
+
+}

@@ -128,3 +128,47 @@
     }
 
 }
+
+.order-id{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#9c76cb;
+
+    margin-top:5px;
+
+}
+
+.delete-order-btn{
+
+    background:#ff4d4d;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+
+.delete-order-btn:hover{
+
+    background:#e53935;
+
+    transform:translateY(-2px);
+
+}

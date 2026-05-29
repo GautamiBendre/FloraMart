@@ -72,16 +72,16 @@ async function loadOrder(){
 
         <div class="track-info-box">
 
-            <h3>
+           <h2>
 
                 ${order.customerName}
 
-            </h3>
+            </h2>
 
             <p>
 
-                Order ID :
-                ${order._id}
+                Order ID:
+                ${order.orderId}
 
             </p>
 

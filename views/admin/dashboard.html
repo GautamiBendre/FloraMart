@@ -88,13 +88,15 @@ href="/css/admin/dashboard.css">
 
         <!-- Orders -->
 
-        <li>
+       <li>
 
             <a href="/admin/orders">
 
                 <i class="fa-solid fa-cart-shopping"></i>
+
                 Orders
-                <span>
+
+                <span id="sidebarOrderCount">
 
                     0
 
@@ -186,20 +188,41 @@ href="/css/admin/dashboard.css">
                 </div>
 
 
+
                 <div class="dashboard-card">
 
                     <h3>
 
-                        Orders
+                        Active Orders
 
                     </h3>
 
-                    <h1 id="orderCount">
+                    <h1 id="activeOrderCount">
 
                         0
 
                     </h1>
+
                 </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <h3>
+
+                        Completed Orders
+
+                    </h3>
+
+                    <h1 id="completedOrderCount">
+
+                        0
+
+                    </h1>
+
+                </div>
+
 
 
                 <div class="dashboard-card">
@@ -220,7 +243,6 @@ href="/css/admin/dashboard.css">
 
             </div>
 
-
           
 
         </div>
@@ -229,6 +251,7 @@ href="/css/admin/dashboard.css">
 
         <script src="/js/dashboard.js"></script>
         <script src="/js/orders.js"></script>
+        <script src="/js/adminSidebar.js"></script>
 </body>
 
 </html>

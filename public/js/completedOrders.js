@@ -85,6 +85,13 @@ async function fetchCompletedOrders(){
 
                         </h3>
 
+                        <p class="order-id">
+
+                            Order ID :
+                            ${order.orderId}
+
+                        </p>
+
                         <p>
 
                             ${order.phone}
@@ -119,29 +126,77 @@ async function fetchCompletedOrders(){
 
                 <div class="order-bottom">
 
-                    <div>
+                        <div>
 
-                        <h4>
+                            <h4>
 
-                            ₹${order.total}
+                                ₹${order.total}
 
-                        </h4>
+                            </h4>
 
-                        <p>
+                            <p>
 
-                            ${order.paymentMethod}
+                                ${order.paymentMethod}
 
-                        </p>
+                            </p>
+
+                        </div>
+
+                        <button
+                        class="delete-order-btn"
+
+                        onclick="deleteOrder(
+                        '${order._id}'
+                        )">
+
+                            Delete Order
+
+                        </button>
 
                     </div>
-
-                </div>
-
             </div>
 
             `;
 
         });
+
+    }
+    catch(error){
+
+        console.log(error);
+
+    }
+
+}
+
+async function deleteOrder(
+    orderId
+){
+
+    const confirmDelete =
+    confirm(
+        "Delete this order?"
+    );
+
+    if(!confirmDelete){
+
+        return;
+
+    }
+
+    try{
+
+        await fetch(
+
+        `/api/orders/${orderId}`,
+
+        {
+
+            method:"DELETE"
+
+        });
+
+        fetchCompletedOrders();
 
     }
     catch(error){

@@ -19,14 +19,41 @@ async function fetchOrders(){
 
 
 
-        data.orders
-        .filter((order) => {
+        const searchValue =
 
-            return order.status !==
-            "Completed";
+document
+.getElementById(
+    "searchOrder"
+)
+?.value
+.toLowerCase() || "";
 
-        })
-        .forEach((order) => {
+
+
+    data.orders
+    .filter((order) => {
+
+        return order.status !==
+        "Completed";
+
+    })
+    .filter((order) => {
+
+    return (
+
+        order.customerName
+        .toLowerCase()
+        .includes(searchValue)
+
+        ||
+
+        order.phone
+        .includes(searchValue)
+
+    );
+
+    })
+    .forEach((order) => {
 
             let productsHTML = "";
 
@@ -99,6 +126,13 @@ Thank you for choosing Bloom Heaven.`
                             ${order.customerName}
 
                         </h3>
+
+                        <p class="order-id">
+
+                            Order ID:
+                            ${order.orderId}
+
+                        </p>
 
                         <p>
 
@@ -336,6 +370,22 @@ async function updateStatus(
 
 
 /* Load */
+
+const searchInput =
+document.getElementById(
+    "searchOrder"
+);
+
+if(searchInput){
+
+    searchInput.addEventListener(
+    "input",
+
+    fetchOrders
+
+    );
+
+}
 
 fetchOrders();
 

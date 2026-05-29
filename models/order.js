@@ -13,6 +13,11 @@ new mongoose.Schema({
         required:true
     },
 
+    orderId:{
+    type:String,
+    unique:true
+    },
+
     address:{
         type:String,
         required:true

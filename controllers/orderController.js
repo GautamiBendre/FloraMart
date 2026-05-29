@@ -12,8 +12,52 @@ async (req,res) => {
 
     try{
 
+        const lastOrder =
+        await Order.findOne()
+        .sort({createdAt:-1});
+
+
+
+        let nextNumber = 1001;
+
+
+
+        if(
+
+            lastOrder &&
+            lastOrder.orderId &&
+            lastOrder.orderId.startsWith("ORD")
+
+        ){
+
+            nextNumber =
+
+            parseInt(
+
+                lastOrder.orderId
+                .replace("ORD","")
+
+            ) + 1;
+
+        }
+
+
+
+        const orderId =
+        "ORD" + nextNumber;
+
+
+
         const newOrder =
-        new Order(req.body);
+        new Order({
+
+            ...req.body,
+
+            orderId
+
+        });
+
+
 
         await newOrder.save();
 
@@ -27,7 +71,7 @@ async (req,res) => {
             "Order Placed Successfully",
 
             orderId:
-            newOrder._id
+            newOrder.orderId
 
         });
 
@@ -45,7 +89,6 @@ async (req,res) => {
     }
 
 };
-
 
 
 /* =========================
@@ -91,16 +134,18 @@ async (req,res) => {
 /* =========================
    GET SINGLE ORDER
 ========================= */
-
 const getSingleOrder =
 async (req,res) => {
 
     try{
 
         const order =
-        await Order.findById(
+        await Order.findOne({
+
+            orderId:
             req.params.id
-        );
+
+        });
 
 
 
@@ -141,6 +186,35 @@ async (req,res) => {
 
 };
 
+const deleteOrder =
+async (req,res) => {
+
+    try{
+
+        await Order.findByIdAndDelete(
+            req.params.id
+        );
+
+        res.status(200).json({
+
+            success:true
+
+        });
+
+    }
+    catch(error){
+
+        res.status(500).json({
+
+            success:false,
+
+            message:error.message
+
+        });
+
+    }
+
+};
 
 
 /* =========================
@@ -217,6 +291,7 @@ module.exports = {
     createOrder,
     getOrders,
     getSingleOrder,
-    updateOrderStatus
+    updateOrderStatus,
+    deleteOrder
 
 };

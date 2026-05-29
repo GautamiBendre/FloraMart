@@ -44,10 +44,49 @@ async function loadOrderStats(){
 
 
 
+        const activeOrders =
+        data.orders.filter((order) => {
+
+            return order.status !==
+            "Completed";
+
+        });
+
+
+
+        const completedOrders =
+        data.orders.filter((order) => {
+
+            return order.status ===
+            "Completed";
+
+        });
+
+
+
         document.getElementById(
-            "orderCount"
+            "activeOrderCount"
         ).innerText =
-        data.orders.length;
+        activeOrders.length;
+
+        const sidebarOrderCount =
+        document.getElementById(
+            "sidebarOrderCount"
+        );
+
+        if(sidebarOrderCount){
+
+            sidebarOrderCount.innerText =
+            activeOrders.length;
+
+        }
+
+
+
+        document.getElementById(
+            "completedOrderCount"
+        ).innerText =
+        completedOrders.length;
 
 
 
@@ -55,7 +94,7 @@ async function loadOrderStats(){
 
 
 
-        data.orders.forEach((order) => {
+        completedOrders.forEach((order) => {
 
             revenue += order.total;
 

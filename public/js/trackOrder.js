@@ -8,23 +8,18 @@ async function loadOrder(){
 
     try{
 
-        const response =
-        await fetch("/api/orders");
+       const response =
+        await fetch(
 
+            `/api/orders/${orderId}`
 
+        );
 
         const data =
         await response.json();
 
-
-
         const order =
-        data.orders.find((item) => {
-
-            return item._id === orderId;
-
-        });
-
+        data.order;
 
 
         const trackContent =

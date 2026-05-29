@@ -18,12 +18,10 @@ new mongoose.Schema({
 
     image:{
         type:String,
-        required:true
     },
 
     discount:{
         type:String,
-        required:true
     },
 
     expiryDate:{

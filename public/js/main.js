@@ -267,7 +267,9 @@ function addToCart(productId){
 
     updateCartCount();
 
-    alert("Product Added To Cart");
+    showToast(
+    "Product Added To Cart"
+);
 
 }
 
@@ -327,6 +329,57 @@ function updateCartCount(){
         totalQuantity;
 
     }
+
+}
+
+/* =========================
+   SHOW TOAST
+========================= */
+
+function showToast(message){
+
+    const container =
+    document.getElementById(
+        "toastContainer"
+    );
+
+
+
+    if(!container){
+
+        return;
+
+    }
+
+
+
+    const toast =
+    document.createElement("div");
+
+
+
+    toast.classList.add(
+        "toast-message"
+    );
+
+
+
+    toast.innerText =
+    message;
+
+
+
+    container.appendChild(
+        toast
+    );
+
+
+
+    setTimeout(() => {
+
+        toast.remove();
+
+    },3000);
 
 }
 

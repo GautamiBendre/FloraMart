@@ -79,7 +79,7 @@ async (e) => {
 
         if(data.success){
 
-            alert(
+            showToast(
                 "Offer Created"
             );
 

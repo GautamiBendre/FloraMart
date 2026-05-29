@@ -7,25 +7,26 @@ async function fetchOrders(){
         const response =
         await fetch("/api/orders");
 
-
-
         const data =
         await response.json();
-
-
 
         const ordersContainer =
         document.getElementById(
             "ordersContainer"
         );
 
-
-
         ordersContainer.innerHTML = "";
 
 
 
-        data.orders.forEach((order) => {
+        data.orders
+        .filter((order) => {
+
+            return order.status !==
+            "Completed";
+
+        })
+        .forEach((order) => {
 
             let productsHTML = "";
 
@@ -69,8 +70,8 @@ async function fetchOrders(){
 
 
 
-const whatsappMessage =
-encodeURIComponent(
+            const whatsappMessage =
+            encodeURIComponent(
 
 `Hello ${order.customerName},
 
@@ -81,16 +82,13 @@ ${trackLink}
 
 Thank you for choosing Bloom Heaven.`
 
-);
+            );
 
 
 
             ordersContainer.innerHTML += `
 
             <div class="order-card">
-
-
-                <!-- Top -->
 
                 <div class="order-top">
 
@@ -117,8 +115,6 @@ Thank you for choosing Bloom Heaven.`
                     </div>
 
 
-
-                    <!-- Status -->
 
                     <select
                     class="status-select"
@@ -167,13 +163,19 @@ Thank you for choosing Bloom Heaven.`
 
                         </option>
 
+                        <option value="Completed"
+                        ${order.status === "Completed"
+                        ? "selected" : ""}>
+
+                            Completed
+
+                        </option>
+
                     </select>
 
                 </div>
 
 
-
-                <!-- Products -->
 
                 <div class="ordered-products">
 
@@ -182,8 +184,6 @@ Thank you for choosing Bloom Heaven.`
                 </div>
 
 
-
-                <!-- Bottom -->
 
                 <div class="order-bottom">
 
@@ -204,8 +204,6 @@ Thank you for choosing Bloom Heaven.`
                     </div>
 
 
-
-                    <!-- WhatsApp -->
 
                     <a
                     target="_blank"
@@ -256,33 +254,26 @@ async function loadOrderCount(){
         const response =
         await fetch("/api/orders");
 
-
-
         const data =
         await response.json();
 
-
-
-        const pendingOrders =
+        const activeOrders =
         data.orders.filter((order) => {
 
-            return order.status === "Pending";
+            return order.status !==
+            "Completed";
 
         });
-
-
 
         const orderCount =
         document.getElementById(
             "orderCount"
         );
 
-
-
         if(orderCount){
 
             orderCount.innerText =
-            pendingOrders.length;
+            activeOrders.length;
 
         }
 
@@ -328,8 +319,6 @@ async function updateStatus(
             })
 
         });
-
-
 
         fetchOrders();
 

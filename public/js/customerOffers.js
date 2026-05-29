@@ -62,12 +62,15 @@ async function loadOffers(){
 
                 <!-- IMAGE -->
 
+                ${offer.image ? `
+
                 <div class="offer-image">
 
-                    <img
-                    src="${offer.image}">
+                    <img src="${offer.image}">
 
                 </div>
+
+                ` : ""}
 
 
 
@@ -75,11 +78,15 @@ async function loadOffers(){
 
                 <div class="offer-content">
 
+                    ${offer.discount ? `
+
                     <span class="offer-discount">
 
                         ${offer.discount}
 
                     </span>
+
+                    ` : ""}
 
                     <h2>
 

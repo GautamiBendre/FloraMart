@@ -228,6 +228,20 @@ app.get("/contact.html", (req,res) => {
     );
 
 });
+
+app.get("/admin/completedOrders", (req,res) => {
+
+    res.sendFile(
+
+        path.join(
+            __dirname,
+            "views/admin/completedOrders.html"
+        )
+
+    );
+
+});
+
 /* Server */
 
 const PORT = process.env.PORT || 5000;

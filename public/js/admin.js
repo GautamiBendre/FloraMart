@@ -78,7 +78,7 @@ async (e) => {
 
         if(data.success){
 
-            alert(
+           showToast(
                 "Product Uploaded Successfully"
             );
 
@@ -122,6 +122,7 @@ async function loadProductCount(){
     }
 
 }
+
 
 /* Load Count */
 

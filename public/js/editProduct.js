@@ -87,7 +87,9 @@ async (e) => {
 
         if(data.success){
 
-            alert("Product Updated");
+           showToast(
+                "Product Updated"
+            );
 
             window.location.href =
             "/admin/allProducts";
